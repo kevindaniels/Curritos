@@ -14,6 +14,7 @@ class AuthInterceptor @Inject constructor() : Interceptor {
 
     private fun sign(request: Request): Request {
         val builder = request.newBuilder()
+        // Terrible practice, but easiest for now
         val token = "Bearer Kc-k-sjlcmP2MeOu-F2PvExqUXc3681zXd7D9L4SVSol1O3Z0dNH3W5RgO6rG80ulQCMXfqcHOu" +
                 "GXsN2fq-R3Fgnw8Bn_RmPau3FkGND3mDqoPVFKoR3qEUTpOV6YXYx"
 
