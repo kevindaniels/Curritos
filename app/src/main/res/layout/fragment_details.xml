@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/map_fragment"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="@dimen/match_constraint"
+        android:layout_height="@dimen/match_constraint"
+        app:layout_constraintBaseline_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent=".8"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/business_details_image"
+        android:layout_width="@dimen/match_constraint"
+        android:layout_height="@dimen/match_constraint"
+        android:layout_margin="@dimen/business_margin"
+        android:contentDescription="@string/details_image_description"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintDimensionRatio="1:1.1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/map_fragment" />
+
+    <TextView
+        android:id="@+id/business_address"
+        android:layout_width="@dimen/match_constraint"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/business_margin"
+        android:layout_marginEnd="@dimen/business_margin"
+        android:maxLines="1"
+        android:textSize="@dimen/text_size_large"
+        android:textStyle="bold"
+        android:gravity="start"
+        app:layout_constraintBottom_toTopOf="@id/business_price_and_rating"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/business_details_image"
+        app:layout_constraintTop_toTopOf="@id/business_details_image"
+        tools:text="2392 E. Commercial Blvd" />
+
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@+id/ratings_barrier"
+        android:layout_width="@dimen/match_constraint"
+        android:layout_height="@dimen/match_constraint"
+        app:barrierDirection="end"
+        app:constraint_referenced_ids="business_details_image,business_phone_number" />
+
+    <TextView
+        android:id="@+id/business_phone_number"
+        android:layout_width="@dimen/match_constraint"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:textSize="@dimen/text_size_medium"
+        app:layout_constraintStart_toStartOf="@+id/business_address"
+        app:layout_constraintTop_toTopOf="@+id/business_price_and_rating"
+        tools:text="(954) 382-3923" />
+
+    <TextView
+        android:id="@+id/business_price_and_rating"
+        android:layout_width="@dimen/match_constraint"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/business_margin"
+        android:layout_marginTop="@dimen/business_margin"
+        android:layout_marginEnd="@dimen/business_margin"
+        android:layout_marginBottom="@dimen/business_margin"
+        android:ellipsize="end"
+        android:gravity="start"
+        android:maxLines="1"
+        android:textSize="@dimen/text_size_medium"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/ratings_barrier"
+        app:layout_constraintTop_toBottomOf="@+id/business_address"
+        tools:text="$$ • 4.3" />
+</androidx.constraintlayout.widget.ConstraintLayout>

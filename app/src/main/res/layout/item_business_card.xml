@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/business_card"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/business_image"
+        android:layout_width="@dimen/match_constraint"
+        android:layout_height="@dimen/match_constraint"
+        android:layout_marginStart="@dimen/business_margin"
+        android:scaleType="fitCenter"
+        android:src="@drawable/ic_burrito_man"
+        app:layout_constraintBottom_toBottomOf="@+id/business_price_and_rating"
+        app:layout_constraintDimensionRatio="1:1.1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/business_name"
+        android:contentDescription="@string/business_image_description" />
+
+    <TextView
+        android:id="@+id/business_name"
+        android:layout_width="@dimen/match_constraint"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/business_margin"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:textSize="@dimen/text_size_medium"
+        android:textStyle="bold"
+        android:gravity="start"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/business_image"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/business_address"
+        tools:text="Big Boyz Burritoz (Hell Yeah)" />
+
+    <TextView
+        android:id="@+id/business_address"
+        android:layout_width="@dimen/match_constraint"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:textSize="@dimen/text_size_medium"
+        android:layout_marginEnd="@dimen/business_margin"
+        app:layout_constraintBottom_toTopOf="@id/business_price_and_rating"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/business_name"
+        app:layout_constraintTop_toBottomOf="@id/business_name"
+        tools:text="2392 E. Commercial Blvd" />
+
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@+id/ratings_barrier"
+        android:layout_width="@dimen/match_constraint"
+        android:layout_height="@dimen/match_constraint"
+        app:barrierDirection="end"
+        app:constraint_referenced_ids="business_image,business_phone_number" />
+
+    <TextView
+        android:id="@+id/business_phone_number"
+        android:layout_width="@dimen/match_constraint"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:textSize="@dimen/text_size_medium"
+        android:layout_marginTop="@dimen/business_margin"
+        android:layout_marginBottom="@dimen/business_margin"
+        app:layout_constraintStart_toStartOf="@+id/business_name"
+        app:layout_constraintTop_toBottomOf="@id/business_address"
+        tools:text="(954) 382-3923" />
+
+    <TextView
+        android:id="@+id/business_price_and_rating"
+        android:layout_width="@dimen/match_constraint"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/business_margin"
+        android:layout_marginEnd="@dimen/business_margin"
+        android:layout_marginBottom="@dimen/business_margin"
+        android:layout_marginStart="@dimen/business_margin"
+        android:ellipsize="end"
+        android:gravity="start"
+        android:maxLines="1"
+        android:textSize="@dimen/text_size_medium"
+        app:layout_constraintStart_toEndOf="@+id/ratings_barrier"
+        app:layout_constraintTop_toBottomOf="@+id/business_address"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:text="$$ • 4.3" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

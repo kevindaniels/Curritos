@@ -1,0 +1,11 @@
+{
+  "data":{
+    "search":{
+      "__typename":"Businesses",
+      "total":0,
+      "business":[
+
+      ]
+    }
+  }
+}

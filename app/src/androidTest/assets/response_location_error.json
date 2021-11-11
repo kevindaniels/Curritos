@@ -1,0 +1,22 @@
+{
+  "errors":[
+    {
+      "message":"Could not execute search, try specifying a more exact location.",
+      "locations":[
+        {
+          "line":1,
+          "column":86
+        }
+      ],
+      "path":[
+        "search"
+      ],
+      "extensions":{
+        "code":"LOCATION_NOT_FOUND"
+      }
+    }
+  ],
+  "data":{
+    "search":null
+  }
+}

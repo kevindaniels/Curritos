@@ -1,0 +1,22 @@
+{
+  "errors":[
+    {
+      "message":"Something went terrible wrong.",
+      "locations":[
+        {
+          "line":1,
+          "column":44
+        }
+      ],
+      "path":[
+        "search"
+      ],
+      "extensions":{
+        "code":"BIG_ISSUE_ISK"
+      }
+    }
+  ],
+  "data":{
+    "search":null
+  }
+}

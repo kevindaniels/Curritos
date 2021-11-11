@@ -1,0 +1,6 @@
+{
+  "error":{
+    "code":"TOKEN_INVALID",
+    "description":"Invalid access token or authorization header."
+  }
+}

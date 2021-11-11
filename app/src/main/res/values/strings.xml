@@ -1,0 +1,40 @@
+<resources>
+    <string name="app_name">Curritos</string>
+    <string name="action_settings">Settings</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+
+    <!-- Permission Fragment -->
+    <string name="permission_fragment_label">Permission Fragment</string>
+    <string name="permission_title">We\'d like your location…</string>
+    <string name="permission_explanation">This application would like to use your location to get the closest burrito spots near you. The application is still usable without it, you will just have to enter a zip code.</string>
+    <string name="permission_enable_button">Enable</string>
+    <string name="permission_use_zip_button">Use Zip</string>
+    <string name="permission_toast_message">Click \"Use Zip\" if you don\'t want to enable location.</string>
+
+    <!-- List Fragment -->
+    <string name="list_fragment_label">List Fragment</string>
+    <string name="list_location_error">Could not get your location.</string>
+    <string name="list_zip_code_hint">Enter your 5 digit zip</string>
+    <string name="list_search">Search</string>
+    <string name="list_search_no_results">No burritos for you :(</string>
+    <string name="list_search_generic_error">Something went wrong looking for your burritos</string>
+    <string name="list_search_location_error">The location you provided could not be found</string>
+    <string name="list_search_invalid_zip">The zip must be 5 digits</string>
+
+    <!-- Details Fragment -->
+    <string name="details_fragment_label">Details Fragment</string>
+    <string name="details_image_description">Image of the Business</string>
+    <string name="details_your_location">Your Location</string>
+    <string name="details_no_coordinates">No coordinates for this business.</string>
+
+    <!-- Business Card -->
+    <string name="business_image_description">Image of the Business</string>
+    <string name="business_unknown_name">Unknown Name</string>
+</resources>

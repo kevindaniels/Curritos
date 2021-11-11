@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/PermissionFragment">
+
+    <fragment
+        android:id="@+id/PermissionFragment"
+        android:name="com.kevin.curritos.permission.PermissionFragment"
+        android:label="@string/permission_fragment_label"
+        tools:layout="@layout/fragment_permission">
+
+        <action
+            android:id="@+id/action_permissionFragment_to_ListFragment"
+            app:destination="@id/ListFragment"
+            app:popUpTo="@id/nav_graph"
+            app:popUpToInclusive="true" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/ListFragment"
+        android:name="com.kevin.curritos.list.ListFragment"
+        android:label="@string/list_fragment_label"
+        tools:layout="@layout/fragment_list">
+
+        <argument
+            android:name="deniedLocation"
+            app:argType="boolean"
+            app:nullable="false" />
+
+        <action
+            android:id="@+id/action_listFragment_to_DetailsFragment"
+            app:destination="@id/DetailsFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/DetailsFragment"
+        android:name="com.kevin.curritos.detail.DetailsFragment"
+        android:label="@string/details_fragment_label"
+        tools:layout="@layout/fragment_details">
+
+        <argument
+            android:name="business"
+            app:argType="com.kevin.curritos.model.Business"
+            app:nullable="false" />
+
+        <argument
+            android:name="latitude"
+            app:argType="string"
+            android:defaultValue="null"
+            app:nullable="true" />
+
+        <argument
+            android:name="longitude"
+            app:argType="string"
+            android:defaultValue="null"
+            app:nullable="true" />
+    </fragment>
+</navigation>
