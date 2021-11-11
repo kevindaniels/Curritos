@@ -8,11 +8,11 @@ ListFragmentTest generates screenshots of different states. After you run the te
 
 
 
-Things that can be improved:
+## Things that can be improved:
 
-• My markdown skills
-• API Key management
-• More testing
-• Better offline support
-• Better injection practices in tests
-• Pagination and refreshing results
+* My markdown skills  
+* API Key management
+* More testing
+* Better offline support
+* Better injection practices in tests
+* Pagination and refreshing results
