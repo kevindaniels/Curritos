@@ -1,4 +1,4 @@
-#Curritos
+# Curritos
 
 If you have trouble building the app, you might need to update Android Studio to Arctic Fox.
 
@@ -9,9 +9,10 @@ ListFragmentTest generates screenshots of different states. After you run the te
 
 
 Things that can be improved:
-My markdown skills
-API Key management
-More testing
-Better offline support
-Better injection practices in tests
-Pagination and refreshing results
+
+• My markdown skills
+• API Key management
+• More testing
+• Better offline support
+• Better injection practices in tests
+• Pagination and refreshing results
