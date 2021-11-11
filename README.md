@@ -16,3 +16,4 @@ ListFragmentTest generates screenshots of different states. After you run the te
 * Better offline support
 * Better injection practices in tests
 * Pagination and refreshing results
+* Toolbar navigation
