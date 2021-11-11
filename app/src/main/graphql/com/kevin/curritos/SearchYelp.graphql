@@ -1,5 +1,5 @@
 query SearchYelp($radius: Float!, $latitude: Float!, $longitude: Float!, $offset: Int!, $term: String!) {
-    search(term: $term,radius: $radius, latitude: $latitude, longitude: $longitude, limit: 10, offset: $offset, sort_by: "best_match") {
+    search(term: $term,radius: $radius, latitude: $latitude, longitude: $longitude, limit: 30, offset: $offset, sort_by: "best_match") {
         total
         business {
             id
@@ -20,7 +20,7 @@ query SearchYelp($radius: Float!, $latitude: Float!, $longitude: Float!, $offset
 }
 
 query SearchYelpZip($radius: Float!, $zip: String!, $offset: Int!, $term: String!) {
-    search(term: $term,radius: $radius, location: $zip, limit: 10, offset: $offset, sort_by: "best_match") {
+    search(term: $term,radius: $radius, location: $zip, limit: 30, offset: $offset, sort_by: "best_match") {
         total
         business {
             id
